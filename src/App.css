@@ -1,3 +1,17 @@
-.App {
-  text-align: center;
+.memory-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 10px;
+  row-gap: 10px;
+  justify-items: stretch;
+  max-width: 920px;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 701px) {
+  .memory-wrapper {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }

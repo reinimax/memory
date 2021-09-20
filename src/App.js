@@ -11,6 +11,7 @@ import commodus from './images/commodus.jpg';
 import titus from './images/titus.jpg';
 import maximinus from './images/maximinus.jpg';
 import './App.css';
+import Card from './Components/Card';
 
 /* Note: the source property is for documentation of the original source. It's 
 not used in the application */
@@ -116,11 +117,14 @@ const images = [
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        {images.map(img => {
-          return <img src={img.src} alt={img.description} />;
-        })}
-      </header>
+      <header className="App-header"></header>
+      <main>
+        <div className="memory-wrapper">
+          {images.map(img => {
+            return <Card src={img.src} alt={img.description} />;
+          })}
+        </div>
+      </main>
     </div>
   );
 }
