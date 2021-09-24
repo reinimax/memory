@@ -3,7 +3,7 @@ import './Card.css';
 
 const Card = props => {
   return (
-    <div className="card">
+    <div data-id={props.id} className="card" onClick={props.onClick}>
       <div className="image-wrapper">
         <img src={props.src} alt={props.description} />
       </div>
